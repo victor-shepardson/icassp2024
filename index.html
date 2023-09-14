@@ -1,176 +1,198 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8"/>
-    <title>REAL-TIME INTERACTIVE NEURAL TEXT-TO-VOICE SYNTHESIS FOR ARTISTIC EXPLORATION - ICASSP 2024</title>
-    <meta content="Demos for research by Victor Shepardson and Jonathan Chaim Reus" name="description"/>
-    <style>
-    * {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    
-    code {
-      font-family: "DM Mono", monospace;
-    }
-    
-    .w-embed .w-iframe {
-      width: 100%;
-    }
-  
-    .w-richtext-align-fullwidth {
-        min-width: 100%;
-    }
-  
-    .w-richtext figure.w-richtext-align-center {
-      width: 100%
-    }
-      
-    .w-richtext figure.w-richtext-align-center.w-richtext-figure-type-image>div {
-        width: 100%
-    }
-    
-    @media (max-width: 990px) {
-        .c_rich-text__blog figure.w-richtext-align-center {
-          max-width: 100%;
-      }
-      
-      .c_rich-text__blog figure.w-richtext-align-center .w-richtext-figure-type-video {
-        max-width: 100%;
-      }
-    }
-      
-  </style>
+  <head>
+    <meta charset="UTF-8">
+    <title>TOWARDS REAL-TIME INTERACTIVE NEURAL TEXT-TO-VOICE SYNTHESIS FOR ARTISTIC EXPLORATION</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="favicons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
-  <body> 
-  <div>
-    <div>
-
-        <div>
-            <h2>REAL-TIME INTERACTIVE NEURAL TEXT-TO-VOICE SYNTHESIS FOR ARTISTIC EXPLORATION - ICASSP 2024</h2>
+  <body>
+    <section id="page-header" class="page-header" style="background-image: url('img/banner.png');">
+        <div id="bg-header"></div>
+        <!-- canvas id="demo-canvas"></canvas -->
+        <!-- img src="img/banner-wide.png" style="width:100%" / -->
+        <div class="main-title">
+          <h1 class="project-name"><span><a href="index.html"></a></span></h1>
+          <h2 class="project-tagline"></h2>
         </div>
-                
-                                                        
-        <div>
-        
-        <p>Introduce research</p>
-        
-        <p></p>
-        
-        <h4>System in Use</h4>
-        
-        <div style="padding:56.25% 0 0 0;position:relative"><iframe src="https://player.vimeo.com/video/858980070?h=70341fc8ca&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:50%;" title="rtVoice draft demo (do not share!)"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+    </section>
+
+    <section class="main-content">
+
+      <center>
+        <a href="" class="btn2">• GitHub •</a>
+       <a href="" class="btn2">• Paper on arXiv •</a></li>
+       <a href="" class="btn2">• Colab demos •</a></li>
+       <a href="" class="btn2">• Tutorial •</a>
+      </center>
+
+        <br>
+        <br>
+        <div style="text-align: center;">
+          <h2>Towards Real-time Interactive Neural Text-to-Voice Synthesis for Artistic Exploration</h2>
+            <p style="text-align: center;"><b>Victor Shepardson and Jonathan Chaim Reus</b></p>
+        </div>
+
+        <h3>Abstract:</h3>
+      <p>
+In recent years, deep learning has enabled speech synthesis to rival human speech in realism. While artists have
+experimented with these technologies, real-time interactive applications have been limited. To bridge this gap,
+we present a novel interactive text-to-voice (ITTV) system which achieves low-latency synthesis, interactivity,
+and controllability while exploring unconventional vocal expressions. It leverages a character-level text encoder,
+Tacotron2-based streaming alignment, and a RAVE VAE as a novel streaming vocoder. The results demonstrate
+that our architecture successfully marries the unique aesthetics of DNN-based voice synthesis with real-time control, addressing artistic requirements not well addressed in current research and paving the way for future work.
+      </p>
+
+      <h3>System architecture:</h3>
+
+      <h3>Training Process:</h3>
+       <center><p><img src="img/paper-architecture-training.png" ></p></center>
+
+      <h2>Real-time Vocalisation</h2>
+       <div style="padding:56.25% 0 0 0;position:relative;">
+         <iframe src="https://player.vimeo.com/video/858980070?h=70341fc8ca&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Demo for &quot;Towards Real-time Interactive Neural Text-to-Voice Synthesis for Artistic Exploration&quot;"></iframe>
+       </div><script src="https://player.vimeo.com/api/player.js"></script>
+ 
+
+      <h2>RAVE as a Vocoder</h2>
+
+<p><b>Audio Samples from Experiments in Vocoder Training</b></p>
+<table border="1">
+<tr><td>Model</td><td colspan="12"></td></tr>
+<tr>
+  <td></td>
+	<td>Example1</td><td>Example2</td><td>Example3</td><td>Example4</td><td>Example5</td>
+</tr>
+
+<tr><td>JVS</td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+</tr>
+
+<tr><td>VCTK</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+</tr>
+
+<tr><td>JVS Style Labelled</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+</tr>
+</table>
+
+<p><b>Audio Samples from Text Encoder Experiments</b></p>
+<table border="1">
+<tr><td>Model</td><td colspan="12"></td></tr>
+<tr>
+  <td></td>
+	<td>Example1</td><td>Example2</td><td>Example3</td><td>Example4</td><td>Example5</td>
+</tr>
+
+<tr><td>JVS</td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+</tr>
+
+<tr><td>VCTK</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+</tr>
+
+<tr><td>JVS Style Labelled</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+</tr>
+</table>
 
 
-        <p>Allowing people to converse with machines is a long-standing dream of human-computer interaction...</p>
-                
-        <p>Link to code</p>
-        
+<h2>Custom Text Annotations</h2> 
+<p><b>Audio Samples of in-text Style Annotation</b></p>
+<table border="1">
+<tr><td>Model</td><td colspan="12"></td></tr>
+<tr>
+  <td></td>
+	<td>Example1</td><td>Example2</td><td>Example3</td><td>Example4</td><td>Example5</td>
+</tr>
 
-        
-        <h4>Example Audio</h4>
-        
-        <p>Audio snippets...</p>
-        
-        
-        <figure>
-            <div><img src="media/architecture-training.png" style="width: 50%" loading="lazy" alt=""/></div>
-        </figure>
-                                                                    
-        <p>Maybe a figure?</p>
-                                                                    
-        <p>Here are some samples:</p>
+<tr><td>JVS</td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+</tr>
 
-<h6>US English</h6>
+<tr><td>VCTK</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+</tr>
 
-<p><strong>Parametric</strong></p>
+<tr><td>JVS Style Labelled</td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
+  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+</tr>
+</table>
 
-<div class="w-embed">
-<audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/US%20English/parametric-1.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/US%20English/parametric-2.wav"></audio>
-</div>
 
-<p><strong>Concatenative</strong></p><div class="w-embed"><audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/US%20English/concatenative-1.wav"></audio>
-  <br/>
-<audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/US%20English/concatenative-2.wav"></audio>
-</div>
+<h3>Citation</h3>
+      <pre class="highlight">
+@article{2023arXiv,
+  author = {{Shepardson}, Victor and {Reus}, Jonathan Chaim},
+  title = "{TOWARDS REAL-TIME INTERACTIVE NEURAL TEXT-TO-VOICE SYNTHESIS FOR ARTISTIC EXPLORATION}",
+  journal = {arXiv e-prints},
+  keywords = {Computer Science - Sound, Computer Science - Computation and Language, Electrical Engineering and Systems Science - Audio and Speech Processing, Interactive Text-to-Voice, Controllable TTS, Artistic Exploration, Streaming Vocoder},
+  year = 2023,
+  month = sept,
+  eid = {arXiv:},
+  pages = {arXiv:},
+  archivePrefix = {arXiv},
+  eprint = {},
+  primaryClass = {cs.SD},
+  adsurl = {},
+  adsnote = {}
+}
+      </pre>
 
-<p><strong>WaveNet</strong></p>
+     
+      <footer class="site-footer">
+        <a href="https://www.sussex.ac.uk/" title="University of Sussex" target="_blank"> <img src="img/logo-sussex.png" border="0" height="70"> </a>
+        <a href="http://www.emutelab.org/" title="Emute Lab" target="_blank"> <img src="img/logo-emute.png" border="0" height="70"> </a>
+        <a href="https://www.lhi.is/" title="Iceland University of the Arts" target="_blank"> <img src="img/logo-icelanduniarts.png" border="0" height="70"> </a>
+        <a href="https://iil.is/" title="Intelligent Instruments Lab" target="_blank"> <img src="img/logo-intelligentinstruments.png" border="0" height="70"> </a>
+        <!-- a href="" title="ICASSP2024" target="_blank"> <img src="" border="0" height="55"> </a-->
 
-<div class="w-embed"><audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/US%20English/wavenet-1.wav"></audio>
-<br/>
-<audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/US%20English/wavenet-2.wav"></audio>
-</div>
+          <div class="cleaner"></div>
+      </footer>
+    <span class="site-footer-owner"><center></center></span>
+    </section>
 
-<h6>Mandarin Chinese</h6>
-
-<p><strong>Parametric</strong></p><div class="w-embed"><audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Mandarin%20Chinese/parametric-1.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Mandarin%20Chinese/parametric-2.wav"></audio></div><p>‍<strong>Concatenative</strong></p><div class="w-embed"><audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Mandarin%20Chinese/concatenative-1.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Mandarin%20Chinese/concatenative-2.wav"></audio></div><p><strong>WaveNet</strong></p><div class="w-embed"><audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Mandarin%20Chinese/wavenet-1.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Mandarin%20Chinese/wavenet-2.wav"></audio>
-</div>
-  
-  <h4>Another Section</h4>
-  
-  <p>Something here.</p>
-  
-<div class="w-embed">
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Speaker%201/speaker-1.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Speaker%201/speaker-2.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Speaker%201/speaker-3.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Speaker%201/speaker-4.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Speaker%201/speaker-5.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Speaker%201/speaker-6.wav"></audio>
-</div>
-  
-  <p>Notice that...</p>
-  
-  <p>As you can hear from these samples...</p>
-  
-  
-<div class="w-embed">
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Speaker%202/speaker-1.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Speaker%202/speaker-2.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Speaker%202/speaker-3.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Speaker%202/speaker-4.wav"></audio>
-</div>
-  
-  <p>Similarly, we could provide additional inputs to the model, such as emotions or accents, to make the speech even more diverse and interesting.</p>
-  
-  <h4>Making Music</h4>
-  
-  <p>...fascinating samples like the ones below:</p>
-  
-<div class="w-embed">
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Music/sample_1.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Music/sample_2.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Music/sample_3.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Music/sample_4.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Music/sample_5.wav"></audio>
-  <br/>
-  <audio controls="" src="https://storage.googleapis.com/deepmind-media/research/WaveNet/Music/sample_6.wav"></audio>
-</div>
-  
-</div>
-</div>
-  
-</body>
+  </body>
 </html>
