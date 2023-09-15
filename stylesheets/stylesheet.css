@@ -146,6 +146,11 @@ a:hover {
   text-align: justify;
 }
 
+.ip{ /* In Progress Item */
+  color: rgba(255, 0, 85, 0.865);
+  font-weight: bold;
+}
+
 @media screen and (min-width: 64em) {
   .project-name {
     font-size: 3.25rem; } }
