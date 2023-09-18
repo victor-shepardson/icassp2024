@@ -67,35 +67,82 @@ that our architecture successfully marries the unique aesthetics of DNN-based vo
       <h2>RAVE as a Vocoder</h2>
 
 <p><b>Audio Samples from Experiments in Vocoder Training</b></p>
+<td>Texts are drawn from the JVS test set. Audio is generated at full temperature and not cherry-picked. Mouse over column headers to see texts.</td>
 <table border="1">
-<tr><td>Model</td><td colspan="12"></td></tr>
-<tr>
-  <td></td>
-	<td>Example1</td><td>Example2</td><td>Example3</td><td>Example4</td><td>Example5</td>
+  <tr>
+    <td>Model</td>
+    <td title="everyone wanted the ordeal, everyone wanted to go into the fire;">Text 0</td><td title="Nothing.">Text 1</td><td title="The minute practice of religion had brutalized her, and mistaken piety had twisted all sweet, merciful and humane feelings, so that she cultivated in their stead a natural dose of greedy intelligence, augmented daily by her association with all the prudes.">Text 2</td>
+  </tr>
+
+<tr><td>r=43Hz, β=1e-2, k=1669bps</td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta1e-2_t0_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta1e-2_t0_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta1e-2_t0_s2.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta1e-2_t1_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta1e-2_t1_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta1e-2_t1_s2.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta1e-2_t2_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta1e-2_t2_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta1e-2_t2_s2.flac"></audio>
+  </td>
 </tr>
 
-<tr><td>JVS</td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+<tr><td>r=21.5Hz, β=1e-2, k=801bps</td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta1e-2_t0_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta1e-2_t0_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta1e-2_t0_s2.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta1e-2_t1_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta1e-2_t1_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta1e-2_t1_s2.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta1e-2_t2_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta1e-2_t2_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta1e-2_t2_s2.flac"></audio>
+  </td>
 </tr>
 
-<tr><td>VCTK</td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+<tr><td>r=43Hz, β=5e-2, k=676bps</td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta5e-2_t0_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta5e-2_t0_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta5e-2_t0_s2.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta5e-2_t1_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta5e-2_t1_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta5e-2_t1_s2.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta5e-2_t2_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta5e-2_t2_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/1k_beta5e-2_t2_s2.flac"></audio>
+  </td>
 </tr>
-
-<tr><td>JVS Style Labelled</td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+<tr><td>r=21.5Hz, β=5e-2, k=377bps</td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta5e-2_t0_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta5e-2_t0_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta5e-2_t0_s2.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta5e-2_t1_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta5e-2_t1_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta5e-2_t1_s2.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta5e-2_t2_s0.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta5e-2_t2_s1.flac"></audio>
+    <audio controls style="width: 150px;" src="audios_demo/2k_beta5e-2_t2_s2.flac"></audio>
+  </td>
 </tr>
 </table>
 
