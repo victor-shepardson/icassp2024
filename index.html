@@ -67,7 +67,7 @@ that our architecture successfully marries the unique aesthetics of DNN-based vo
       <h2>RAVE as a Vocoder</h2>
 
 <p><b>Audio Samples from Experiments in Vocoder Training</b></p>
-<td>Texts are drawn from the JVS test set. Audio is generated at full temperature and not cherry-picked. Mouse over column headers to see texts.</td>
+Comparison of vocoder hyperparameters on full TTS pipeline. Texts are drawn from the JVS test set. Audio is generated from TTS at full temperature and not cherry-picked. Mouse over column headers to see texts.
 <table border="1">
   <tr>
     <td>Model</td>
@@ -147,35 +147,93 @@ that our architecture successfully marries the unique aesthetics of DNN-based vo
 </table>
 
 <p><b>Audio Samples from Text Encoder Experiments</b></p>
+Dataset is a 20% split of JVS. Vocoder is the 801 bps model, above. Text is Text 1, above.
 <table border="1">
 <tr><td>Model</td><td colspan="12"></td></tr>
 <tr>
   <td></td>
-	<td>Example1</td><td>Example2</td><td>Example3</td><td>Example4</td><td>Example5</td>
+	<td>Epoch 10</td><td>Epoch 20</td><td>Epoch 30</td><td>Epoch 40</td><td>Epoch 60</td><td>Epoch 90</td>
 </tr>
 
-<tr><td>JVS</td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+<tr><td>CANINE (finetuned)</td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0010_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0010_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0020_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0020_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0030_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0030_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0040_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0040_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0060_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0060_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0090_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_finetune_c0090_t0_s1.flac"></audio>
+  </td>
 </tr>
 
-<tr><td>VCTK</td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+<tr><td>CANINE (reinitialized)</td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0010_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0010_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0020_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0020_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0030_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0030_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0040_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0040_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0060_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0060_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0090_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_init_c0090_t0_s1.flac"></audio>
+  </td>
 </tr>
 
-<tr><td>JVS Style Labelled</td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+<tr><td>Tacotron2 Baseline</td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0010_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0010_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0020_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0020_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0030_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0030_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0040_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0040_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0060_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0060_t0_s1.flac"></audio>
+  </td>
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0090_t0_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/text_baseline_c0090_t0_s1.flac"></audio>
+  </td>
 </tr>
 </table>
 
@@ -186,31 +244,22 @@ that our architecture successfully marries the unique aesthetics of DNN-based vo
 <tr><td>Model</td><td colspan="12"></td></tr>
 <tr>
   <td></td>
-	<td>Example1</td><td>Example2</td><td>Example3</td><td>Example4</td><td>Example5</td>
-</tr>
-
-<tr><td>JVS</td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-<td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
-</tr>
-
-<tr><td>VCTK</td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+	<td>No style</td>
+  <td>Style 0</td>
+  <td>Style 1</td>
+  <td>Style 2</td>
+  <td>Style 3</td>
+  <td>Style 4</td>
+  <td>Style 5</td>
+  <td>Style 6</td>
 </tr>
 
 <tr><td>JVS Style Labelled</td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>
-  <td><audio controls style="width: 110px;" src="audios_demo/xxx.wav"></audio></td>  
+  <td>
+    <audio controls style="width: 110px;" src="audios_demo/style_none_s0.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/style_none_s1.flac"></audio>
+    <audio controls style="width: 110px;" src="audios_demo/style_none_s2.flac"></audio>
+  </td>
 </tr>
 </table>
 
